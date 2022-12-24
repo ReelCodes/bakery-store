@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="container">
+        <form action="index.html" method="post">
+            <div class="erro"></div>
+            <h1>Sign in Form CSS</h1>
+            <div class="holder">
+                <input type="text" class="login-input" placeholder="What is your name?">
+                <input type="email" class="login-input" placeholder="Enter your email...">
+                <input type="password" id="pass1" class="login-input" placeholder="Enter your password...">
+                <input type="password" id="pass2" class="login-input" placeholder="Repeat your password...">
+                <input type="submit" class="login-button" value="Sign in">
+                <p>Already have an account? <a href="login.html">Log in.</a></p>
+                <hr>
+                <p>Made by Jonny.</p>
+            </div>
+        </form>
+    </div>
+
+<script>
+    var pass1 = document.getElementById("pass1");
+    var pass2 = document.getElementById("pass2");
+    var erro = document.getElementsByClassName("erro");
+    var form = document.querySelector("form");
+    form.onsubmit = function(){
+        if(pass1 !=pass2 ){
+            erro.innerHTML = "hello there!";
+        }
+    }
+    
+</script>
+</body>
+</html>
